@@ -35,20 +35,6 @@ app.get("/weather", (req, res) => {
     });
 });
 
-app.get("/about", (req, res) => {
-    res.render("about", {
-        title: "About me",
-        name: "Yuti-Ma"
-    });
-});
-
-app.get("/help", (req, res) => {
-    res.render("help", {
-        title: "help",
-        name: "Yuti-Ma"
-    });
-});
-
 app.get("/weathers", (req, res) => {
 
     if(!req.query.address){
@@ -74,14 +60,34 @@ app.get("/weathers", (req, res) => {
             });
         });
     });
-    
+});
 
-    // res.send({
-    //     address:[],
-    //     address: req.query.address
-    // });
+app.get("/about", (req, res) => {
+    res.render("about", {
+        title: "About me",
+        name: "Yuti-Ma"
+    });
+});
 
-    
+app.get("/about/education", (req, res) => {
+    res.render("education", {
+        title: "Education",
+        name: "Yuti-Ma"
+    });
+});
+
+app.get("/about/conference", (req, res) => {
+    res.render("conference", {
+        title: "Conference",
+        name: "Yuti-Ma"
+    });
+});
+
+app.get("/help", (req, res) => {
+    res.render("help", {
+        title: "help",
+        name: "Yuti-Ma"
+    });
 });
 
 app.get("/help/*", (req, res) => {

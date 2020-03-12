@@ -21,28 +21,36 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(publicDirectoryPath)); //index.html
 
 //res.render(file_name, json_format);
-app.get('', (req, res) => {
+app.get("", (req, res) => {
     res.render("index", {
-        title: "Weather",
+        title: "homepage",
         name: "Yuti-Ma"
     }) ;
 });
 
-app.get('/about', (req, res) => {
+app.get("/weather", (req, res) => {
+    res.render("weather", {
+        title: "weather",
+        name: "Yuti-Ma"
+    });
+});
+
+app.get("/about", (req, res) => {
     res.render("about", {
         title: "About me",
         name: "Yuti-Ma"
     });
 });
 
-app.get('/help', (req, res) => {
+app.get("/help", (req, res) => {
     res.render("help", {
         title: "help",
         name: "Yuti-Ma"
     });
 });
 
-app.get("/weather", (req, res) => {
+app.get("/weathers", (req, res) => {
+
     if(!req.query.address){
         return res.send({
             error: "You must provide an address!"

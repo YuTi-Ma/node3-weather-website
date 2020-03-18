@@ -35,7 +35,7 @@ app.get("/weather", (req, res) => {
     });
 });
 
-app.get("/weathers", (req, res) => {
+app.get("/weather", (req, res) => {
 
     if(!req.query.address){
         return res.send({
@@ -117,18 +117,6 @@ app.get("", (req, res) => { //here is the code you write down below app.listen, 
 });
 
 */
-
-//send json format
-app.get("/weather", (req, res) => {
-    res.send([{
-        forecast: "weather",
-        location: "taiwan"
-
-    },{
-        geocode: "geocode"
-    }]);
-});
-
 
 //localhost port
 app.listen(port, () => {

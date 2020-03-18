@@ -111,7 +111,6 @@ the argument in app.get,
 first_argument is ip-adderss where you wanna go, example: localhost:port/first_argument
 second_argument is request & response
 
-
 app.get("", (req, res) => { //here is the code you write down below app.listen, and it's port is the first_argument in app.listen
     res.send("<h1>this is localhost page!<h1>");
 });

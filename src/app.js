@@ -29,13 +29,6 @@ app.get("", (req, res) => {
 });
 
 app.get("/weather", (req, res) => {
-    res.render("weather", {
-        title: "weather",
-        name: "Yuti-Ma"
-    });
-});
-
-app.get("/weather", (req, res) => {
 
     if(!req.query.address){
         return res.send({

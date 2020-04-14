@@ -55,7 +55,10 @@ app.get("/weathers", (req, res) => {
             
             res.send({
                 location: data.location,
-                forecast: forecastData,
+                summary: forecastData.summary,
+                temperature: forecastData.temperature,
+                precipIntensity: forecastData.precipIntensity,
+                windSpeed: forecastData.windSpeed,
                 address: req.query.address 
             });
         });

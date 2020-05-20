@@ -29,11 +29,9 @@ weatherForm.addEventListener("submit", (event) => {
                 messageOne.textContent = "Location: " + data.location;
                 messageTwo.textContent = "Summary: " + data.summary;
                 messageThree.textContent = "Temperature: " + data.temperature + " ℃";
-                messageFour.textContent = "PrecipIntensity: " + data.precipIntensity + "% chance of rain.";
+                messageFour.textContent = "PrecipIntensity: " + data.precipIntensity*100 + "% chance of rain.";
                 messageFive.textContent = "WindSpeed: " + data.windSpeed + " meters per second.";
             }
-            
-            
         });
     });
 });

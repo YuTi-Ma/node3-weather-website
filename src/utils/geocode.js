@@ -2,7 +2,7 @@ const request = require("request");
 
 const geocode = (address, callback) => {
     //encodeURIComponent(), will transform the code into UTF-8
-    const url = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + encodeURIComponent(address) + ".json?access_token=pk.eyJ1IjoieXV0aW1hIiwiYSI6ImNrNzc4Mnc1dzA1MjkzZG9nanFsZ2Rrcm4ifQ.h7_UX61rPNIJGiJZJnYwtQ";
+    const url = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + encodeURIComponent(address) + ".json?access_token=pk.eyJ1IjoieXV0aW1hIiwiYSI6ImNrNzc4Mnc1dzA1MjkzZG9nanFsZ2Rrcm4ifQ.h7_UX61rPNIJGiJZJnYwtQ&limit=1";
     request({url: url, json: true}, (error, response) => {
         if(error){
             callback("Unable to connect to location service!", undefined);
